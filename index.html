@@ -4921,6 +4921,10 @@
                         <p><strong>Teléfono: </strong><a href="tel:+5492964411234"></a>2964 411234</p>
                         <a href="https://wa.me/+5492964411234?text=Hola,%20quiero%20hacer%20una%20consulta" 
                         class="btn btn-success mt-3" 
+                        onclick="gtag('event','click_telefono',{
+                        event_category:'contacto',
+                        event_label:'boton_telefono'
+                        })"
                         target="_blank"
                         >Escribir por WhatsApp
                         </a>
@@ -4985,7 +4989,14 @@
                         <input type="hidden" name="_autoresponse" value="Hemos recibido su consulta.">
                         <input type="hidden" name="_next" value="https://e7master.github.io/estudio-juridico/">
 
-                        <button type="submit" class="btn btn-primary btn-lg w-100">Enviar Consulta</button>
+                        <button 
+                        type="submit" 
+                        class="btn btn-primary btn-lg w-100"
+                        onclick=" gtag('event', 'formulario_enviado', {
+                        event_category: 'contacto',
+                        event_label: 'formulario_contacto'
+                        })"
+                        >Enviar Consulta</button>
                     </form>
                     </div>
                 </div>
@@ -4993,7 +5004,13 @@
         </section>
 
         <!--Boton wpp flotante-->
-        <a href="https://wa.me/5492964411234?text=Hola,%20quiero%20hacer%20una%20consulta" class="btn-wsp" target="_blank">
+        <a href="https://wa.me/5492964411234?text=Hola,%20quiero%20hacer%20una%20consulta" 
+            class="btn-wsp" 
+            onclick="gtag('event','click_whatsapp',{
+            event_category:'contacto',
+            event_label:'boton_whatsapp'
+            })"
+            target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
         </a>
 
