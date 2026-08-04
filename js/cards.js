@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         item.classList.add("open");
         content.style.maxHeight = content.scrollHeight + "px";
         content.style.opacity = 1;
-        icon.textContent = "–";
+        icon.textContent = "-";
       }
     });
   });

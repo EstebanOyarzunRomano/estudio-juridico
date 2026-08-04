@@ -103,31 +103,43 @@ h1, h2, h3, h4, h5 {
 #equipo {
   background: #d7e3f4;
 }
+#equipo .row {
+  margin-top: 2.5rem;
+}
+#equipo .equipo-integrante {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 #equipo img {
   width: 100%;
   max-width: 220px;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin: 0 auto 1rem;
   display: block;
-  border-radius: 14%;
+  border-radius: 12%;
   transition: transform 0.3s ease;
+}
+#equipo img:hover {
+  transform: scale(1.05);
 }
 #equipo h5 {
   margin-top: 0.3rem;
   margin-bottom: 0.5rem;
 }
 #equipo p {
+  width: 100%;
   margin-top: 0;
   text-align: justify;
   max-width: 340px;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.55;
 }
-
-.equipo img:hover {
-  transform: scale(1.05);
+#equipo .matricula {
+  min-height: 48px;
 }
 
 .estudio {
@@ -136,9 +148,22 @@ h1, h2, h3, h4, h5 {
 
 .contacto {
   background: #d7e3f4;
-  text-align: center;
+}
+.contacto a {
+  overflow-wrap: anywhere;
+}
+.contacto .contacto .text-center.mt-5 {
+  margin-top: 2rem !important;
+}
+.contacto .contacto p {
+  font-size: 1.1rem;
 }
 
+@media (max-width: 768px) {
+  .contacto p {
+    font-size: 1rem !important;
+  }
+}
 .direccion-texto {
   display: flex;
   justify-content: center;
@@ -156,8 +181,10 @@ h1, h2, h3, h4, h5 {
   #equipo img {
     width: 70%;
     max-width: 280px;
-    height: auto;
-    max-height: none;
+    height: 380px;
+  }
+  #equipo .equipo-integrante {
+    margin-bottom: 1.5rem;
   }
 }
 .blog {
